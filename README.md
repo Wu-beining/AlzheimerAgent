@@ -6,8 +6,6 @@
 
 **Anatomical evidence · Multimodal prediction · Traceable reasoning**
 
-[Overview](#overview) · [Method](#method) · [Results](#results) · [Case Studies](#case-studies) · [Getting Started](#getting-started) · [Citation](#citation)
-
 </div>
 
 ## Overview
@@ -21,8 +19,6 @@ The central idea is to make an assessment traceable: regional measurements and a
 </p>
 
 *Figure 1. Shared imaging quantification and a Memory Bank connect prediction, evidence review, and interaction.*
-
-This repository includes model components, training utilities, agent orchestration, report generation, and VQA.
 
 ## Method
 
@@ -132,8 +128,7 @@ Brain age estimation with MRI + sex. MAE and RMSE measure prediction error; R²,
   <img src="assets/figures/anatomical_evidence.png" alt="MRI and PET anatomical evidence, regional volumetry, and training-reference distributions" width="100%" />
 </p>
 
-Regional measurements retain their anatomical context and training-reference distributions. Image intensity alone is not a quantified PET SUVR measurement.
-
+Regional measurements retain their anatomical context and training-reference distributions. 
 </details>
 
 <details>
