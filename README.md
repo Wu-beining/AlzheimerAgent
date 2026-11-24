@@ -121,7 +121,6 @@ Brain age estimation with MRI + sex. MAE and RMSE measure prediction error; R²,
 
 *Figure 4. A worked case connects the initial prediction, evidence from independent patient domains, the reviewed assessment, and follow-up questions.*
 
-<details>
 <summary><strong>Anatomical quantification and regional references · Figure 2</strong></summary>
 
 <p align="center">
@@ -129,9 +128,7 @@ Brain age estimation with MRI + sex. MAE and RMSE measure prediction error; R²,
 </p>
 
 Regional measurements retain their anatomical context and training-reference distributions. 
-</details>
 
-<details>
 <summary><strong>Region-constrained prototype evidence · Figure 3</strong></summary>
 
 <p align="center">
@@ -140,9 +137,7 @@ Regional measurements retain their anatomical context and training-reference dis
 
 Held-out examples from ADNI and OASIS-3 pair regional gray-matter volumes with anatomically matched CN-prototype similarities.
 
-</details>
 
-<details>
 <summary><strong>Integrated report and patient summary · Figure 5</strong></summary>
 
 <p align="center">
@@ -151,7 +146,6 @@ Held-out examples from ADNI and OASIS-3 pair regional gray-matter volumes with a
 
 The final case presentation brings task outputs and their evidence into a clinical report and a patient-facing summary.
 
-</details>
 
 ## Getting Started
 
