@@ -1,0 +1,1 @@
+{"task":"brain_age","implementation":"standalone_adaptation","kwargs":{"with_sex":true,"input_shape":[192,192,192]}}

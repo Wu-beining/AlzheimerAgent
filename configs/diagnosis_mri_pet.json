@@ -1,0 +1,1 @@
+{"task":"classification","kwargs":{"route":"MRI_PET","roi_ids":[1,2],"prototypes_per_roi":3,"prototype_weight":0.1}}

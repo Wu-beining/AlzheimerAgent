@@ -1,0 +1,1 @@
+{"task":"brain_age","implementation":"author_brainmri","kwargs":{"source_dir":"third_party/BrainMRI","with_sex":true,"heads":8}}

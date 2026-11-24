@@ -20,7 +20,7 @@ The central idea is to make an assessment traceable: regional measurements and a
   <img src="assets/figures/framework.png" alt="AlzheimerAgent framework: shared perception, task-specific models, expert review, report generation, and visual question answering" width="100%" />
 </p>
 
-*Figure 1 from the manuscript. Shared imaging quantification and a Memory Bank connect prediction, evidence review, and interaction.*
+*Figure 1. Shared imaging quantification and a Memory Bank connect prediction, evidence review, and interaction.*
 
 This repository includes model components, training utilities, agent orchestration, report generation, and VQA.
 
@@ -28,7 +28,7 @@ This repository includes model components, training utilities, agent orchestrati
 
 ### 1. Shared perception and anatomical evidence
 
-MRI preprocessing combines bias-field correction, skull stripping, and registration. Regional brain volumes are measured in native space with explicit intracranial-volume normalization. When eligible PET is available, PET-to-MRI alignment connects regional uptake measurements to the same anatomy; the manuscript uses whole-cerebellum-referenced SUVR.
+MRI preprocessing combines bias-field correction, skull stripping, and registration. Regional brain volumes are measured in native space with explicit intracranial-volume normalization. When eligible PET is available, PET-to-MRI alignment connects regional uptake measurements to the same anatomy; regional PET quantification uses whole-cerebellum-referenced SUVR.
 
 Region-constrained prototypes associate local imaging features with training references from the same anatomical region and class. Separate MRI and PET prototype banks contribute to the global prediction and preserve the provenance of their matched references.
 
@@ -58,7 +58,7 @@ The reporting pipeline produces a clinician report, a patient-facing summary, an
 
 ## Results
 
-**Results reported in the manuscript.** Values are mean ± standard deviation across three seeds. Classification and progression metrics are percentages; brain-age errors and bias are in years. Within each table, *n* denotes evaluated records or visits, which may include repeated visits from a participant.
+Values are mean ± standard deviation across three seeds. Classification and progression metrics are percentages; brain-age errors and bias are in years. Within each table, *n* denotes evaluated records or visits, which may include repeated visits from a participant.
 
 ### Evaluation cohorts
 
@@ -74,7 +74,7 @@ The study includes **2,136 unique participants** across five cohorts. ADNI and O
 
 ### Clinical status classification
 
-Selected AlzheimerAgent results from manuscript Tables 2–4. **FULL** denotes the combined evidence condition in the experiments, rather than an additional primary model route. Different input conditions can have different eligible samples.
+**FULL** denotes the combined evidence condition in the experiments, rather than an additional primary model route. Different input conditions can have different eligible samples.
 
 | Evaluation | Input condition | n | Accuracy ↑ | Macro-F1 ↑ |
 |---|---|---:|---:|---:|
@@ -93,7 +93,7 @@ Under the matched internal FULL condition, MeanFusion achieves 71.96 ± 1.40 acc
 
 ### MCI-to-AD progression
 
-Matched internal FULL-condition comparisons from manuscript Tables 5–6. F1 and AUPRC are included alongside AUROC to show performance under the observed class imbalance.
+Matched internal FULL-condition comparisons. F1 and AUPRC are included alongside AUROC to show performance under the observed class imbalance.
 
 | Horizon | Method | n | Accuracy ↑ | F1 ↑ | AUROC ↑ | AUPRC ↑ |
 |---|---|---:|---:|---:|---:|---:|
@@ -102,11 +102,11 @@ Matched internal FULL-condition comparisons from manuscript Tables 5–6. F1 and
 | 3 years | MeanFusion | 45 | 82.22 ± 2.22 | 63.05 ± 7.88 | 88.30 ± 3.43 | 78.22 ± 5.49 |
 | 3 years | AlzheimerAgent | 45 | **85.19 ± 4.63** | **70.29 ± 9.57** | **90.99 ± 1.39** | **82.01 ± 5.65** |
 
-The external OASIS-2 3-year MRI + Table experiment contains only 24 eligible records and is exploratory: AUROC is 67.48 ± 3.34 and AUPRC is 69.55 ± 3.69 (manuscript Table 7).
+The external OASIS-2 3-year MRI + Table experiment contains only 24 eligible records and is exploratory: AUROC is 67.48 ± 3.34 and AUPRC is 69.55 ± 3.69.
 
 ### Brain age estimation
 
-MRI + sex results from manuscript Tables 8–9. MAE and RMSE measure prediction error; R², correlation, and signed bias expose calibration and domain-shift behavior.
+Brain age estimation with MRI + sex. MAE and RMSE measure prediction error; R², correlation, and signed bias expose calibration and domain-shift behavior.
 
 | Evaluation | n | MAE ↓ | RMSE ↓ | R² ↑ | Pearson r ↑ | Bias |
 |---|---:|---:|---:|---:|---:|---:|
@@ -120,10 +120,10 @@ MRI + sex results from manuscript Tables 8–9. MAE and RMSE measure prediction 
 ### Expert review and evidence-grounded VQA
 
 <p align="center">
-  <img src="assets/figures/expert_review_vqa.png" alt="Manuscript case study tracing an initial model prediction through expert review and evidence-grounded visual question answering" width="100%" />
+  <img src="assets/figures/expert_review_vqa.png" alt="Case study tracing an initial model prediction through expert review and evidence-grounded visual question answering" width="100%" />
 </p>
 
-*Figure 4 from the manuscript. A worked case connects the initial prediction, evidence from independent patient domains, the reviewed assessment, and follow-up questions. This is an illustrative case, not an additional performance estimate.*
+*Figure 4. A worked case connects the initial prediction, evidence from independent patient domains, the reviewed assessment, and follow-up questions.*
 
 <details>
 <summary><strong>Anatomical quantification and regional references · Figure 2</strong></summary>
